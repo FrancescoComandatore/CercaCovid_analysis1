@@ -61,11 +61,15 @@ The results and figure of the paper have been generated with Python 3.7.4 and th
 
 To reproduce all results and figures of the paper, from a terminal:
 
-1. Run the Python script `Create_plots_and_images.py`. The script will generate:
+
+1. Unzip the `Shp.zip` file
+
+2. Run the Python script `Create_plots_and_images.py`. The script will generate:
     - A CSV file `CERCACOVID_questionari_score.csv` containing the score associated to each user.
     - The images `Extended Data Figure 3.png`, `Extended Data Figure 5.png`, `Extended Data Figure 6a.png`, `Extended Data Figure 6b.png`.
     - The Excel files `Extended Data Figure 4_table.xlsx` and file `Numerical_values.xlsx`.
-2. Run the R script `Rcommands.R`. The script will generate:
+
+3. Run the R script `Rcommands.R`. The script will generate:
     - The images `Extended_Data_Figure1.pdf`,`Extended_Data_Figure2.pdf`,`Extended_Data_Figure7.pdf`,`Extended_Data_Figure8.pdf`,`Extended_Data_Figure9.pdf`,`Figure1.pdf`,`Figure2.pdf`,`Figure3.pdf`
 
 
