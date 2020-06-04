@@ -52,10 +52,10 @@ The results and figure of the paper have been generated with Python 3.7.4 and th
 
 ### R dependencies
 
-ff (v. 2.2.14.2)
-ggplot2 (v. 3.3.0)
-ggpubr (v. 0.2.3)
-ggrepel (v. 0.8.1)
+- ff (v. 2.2.14.2)
+- ggplot2 (v. 3.3.0)
+- ggpubr (v. 0.2.3)
+- ggrepel (v. 0.8.1)
 
 ## Instructions
 
