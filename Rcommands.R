@@ -6,7 +6,7 @@ library(ggrepel)
 
 # Load tables
 
-cercacovid_data= "CERCACOVID_questionari_clean_2020-05-03.csv" 
+cercacovid_data= "CERCACOVID_questionari_clean_2020-05-04.csv" 
 score_data = "CERCACOVID_questionari_score.csv"
 
 x <- read.csv.ffdf(file= cercacovid_data, header=TRUE, VERBOSE=TRUE, first.rows=10000, next.rows=50000, colClasses=NA)
