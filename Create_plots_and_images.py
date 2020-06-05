@@ -13,7 +13,7 @@ import shapely
 SHP_PATH = 'Shp'
 
 # loading data
-INPUTFN = os.path.join('DF_CLEAN', 'CERCACOVID_questionari_clean_2020-05-04.csv')
+INPUTFN ='CERCACOVID_questionari_clean_2020-05-04.csv'
 assert os.path.exists(INPUTFN)
 
 
@@ -271,6 +271,13 @@ num_values.loc['users median age', 'value'] = df_last['ETA'].median()
 num_values.loc['users between 20 and 60', 'value'] = df_last.loc[np.logical_and(df_last['ETA'] >= 20, df_last['ETA'] <= 60)].shape[0]
 num_values.loc['putative COVID - users', 'value'] = score_df.loc[score_df['SCORE'] <= 3].shape[0]
 num_values.loc['putative COVID + users', 'value'] = score_df.loc[score_df['SCORE'] >= 8].shape[0]
+
+curr = df_clean.pivot_table(index='DT_CREATION_DATA', values='ID_QUESTIONARIO', aggfunc='count').sort_index().reset_index()
+curr1 = curr.loc[curr['DT_CREATION_DATA'] < pd.to_datetime('2020-04-16', format='%Y-%m-%d')]['ID_QUESTIONARIO'].median()
+num_values.loc['median users per day before April 16th', 'value'] = curr1
+
+curr2 = curr.loc[curr['DT_CREATION_DATA'] >= pd.to_datetime('2020-04-16', format='%Y-%m-%d')]['ID_QUESTIONARIO'].median()
+num_values.loc['median users per day after April 16th', 'value'] = curr2
 
 num_values.to_excel('Numerical_values.xlsx')
 
